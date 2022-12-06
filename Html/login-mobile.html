@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet"> 
+    
+    <title>Document</title>
+    <style>
+         :root{
+            --very-light-pink:#c7c7c7;
+            --white:#FFFFFF;
+            --text-input-field:#F7F7F7;
+            --black:#000000;
+            --hospital-green :#ACD9B2;
+            --dark:#232830;
+            --sm:1.4rem;
+            --md:1.6rem;
+            --lg:1.8rem;
+
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+           font-size: 62.5%;
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+            background-color:lightyellow;
+        }
+        .login{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items:center ;
+        }
+        .form-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+    
+        }
+        .logo{
+            width: 50%;
+            margin-bottom: 20px;
+            justify-self: center;
+            display: none;
+        }
+        .title{
+            font-size: var(--lg);
+            margin-bottom: 1.2rem;
+            text-align: center;
+        
+        }
+        .subtitule{
+            color: var(--very-light-pink);
+            text-align: center;
+            font-size: var(--md);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+        }
+        .label{
+            color: var(--black);
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: .4rem;
+        }
+        .input{
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: .8rem;
+            height: 3rem;
+            font-size: var(--md);
+            padding: .6rem;
+            margin-bottom: 1rem;
+        
+        }
+        .primary-button{
+            background-color: var(--hospital-green);
+            border: none;
+            border-radius: .8rem;
+            color:var(--white) ;
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 5rem;
+            margin-top: 1.4rem;
+            margin-bottom: 3rem;
+        }
+
+        @media(max-width:640px){
+            .logo{
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <img src="https://www.pngkey.com/png/detail/66-661551_white-blank-shield-logo-school-logo-template-free.png" alt="logo" class="logo">
+            <h1 class="title">Create a new pasword</h1>
+            <p class="subtitule">Enter a new pasword for your account</p>
+            <form action="#" class="form">
+                <label for="password" class="label">Password</label>
+                <input type="password" id="password" placeholder="*********" class="input input-password">
+                
+                <label for="new-password" class="label">New-password</label>
+                <input type="password" id="new-password" placeholder="*********" class="input input-password">
+                
+                <input type="submit" value="Confirm" class="primary-button login-button">
+                
+                
+            </form>
+            
+
+
+        </div>
+    </div>
+</body>
+</html>
