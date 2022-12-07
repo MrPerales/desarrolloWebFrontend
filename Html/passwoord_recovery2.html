@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet"> 
+    <title>Document</title>
+    <style>
+         :root{
+            --very-light-pink:#c7c7c7;
+            --white:#FFFFFF;
+            --text-input-field:#F7F7F7;
+            --black:#000000;
+            --hospital-green :#ACD9B2;
+            --dark:#232830;
+            --sm:1.4rem;
+            --md:1.6rem;
+            --lg:1.8rem;
+
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+           font-size: 62.5%;
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+            background-color:lightyellow;
+        }
+        .recovery{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .form-container{
+            width: 30rem;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            justify-items: center;
+        }
+        .logo{
+            width: 50%;
+            justify-self: center;
+            margin-bottom: 1rem;
+        }
+        .title{
+            font-size: var(--lg);
+            text-align: center;
+            margin-bottom: 1.2rem;
+
+        }
+        .subtitle{
+            font-size: var(--md);
+            color: var(--very-light-pink);
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .email-image{
+            width: 10rem;
+            height: 10rem;
+            background-color: var(--very-light-pink);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .inbox{
+            width: 70%;
+            justify-self: center;
+            margin-bottom: 2rem;
+        }
+        .primary-button{
+            border: none;
+            border-radius: .8rem;
+            width: 100%;
+            height: 3rem;
+            background-color: var(--hospital-green);
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+        form p{
+
+            text-align: center;
+            font-size: 1rem;
+            
+        }
+        form a{
+            text-decoration: none;
+            padding-left: .5rem;
+            color: var(--hospital-green);
+        }
+        @media (min-width:600px){
+            .logo{
+                display: none;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="recovery">
+        <div class="form-container">
+            <img src="https://www.pngkey.com/png/detail/66-661551_white-blank-shield-logo-school-logo-template-free.png" alt="logo" class="logo">
+            <h1 class="title">Email has been sent!</h1>
+            <p class="subtitle"> Please check your inbox for instructions on how to reset the password</p>
+            <div class="email-image">
+                <img src="https://icon-library.com/images/inbox-icon-png/inbox-icon-png-5.jpg" alt="inbox" class="inbox">
+            </div>
+            
+            <form action="/">
+                <input type="submit" value="Login" class="primary-button">
+                <p>Didn´t receive the email?<a href="#">Resend</a></p>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
