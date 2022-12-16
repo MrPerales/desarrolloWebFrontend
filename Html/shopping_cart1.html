@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet"> 
+    
+    <title>Document</title>
+    <style>
+        :root{
+            --very-light-pink:#c7c7c7;
+            --white:#FFFFFF;
+            --text-input-field:#F7F7F7;
+            --black:#000000;
+            --hospital-green :#ACD9B2;
+            --dark:#232830;
+            --sm:1.4rem;
+            --md:1.6rem;
+            --lg:1.8rem;
+            --card-size-mobile:16rem;
+            --card-size-desktop:24rem;
+
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+           font-size: 62.5%;
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+            /*background-color:lightyellow;*/
+        }
+
+        .primary-button{
+            background-color: var(--hospital-green);
+            border: none;
+            border-radius: .8rem;
+            color:var(--white) ;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 3.7rem;
+            margin: 0rem 1rem;
+            
+            
+        }
+        .product-datail{
+            width: 100vw;
+            height: 100vh;
+            
+            
+        }
+        .my-order-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            gap: 2rem;
+            width: 100vw;
+        }
+        .my-order-content{
+            display: grid;
+            gap: 1.6rem;
+        }
+        .articulos{
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--text-input-field);
+            height: 5rem;
+            align-items: center;
+            padding: 0rem 1rem 0rem 1rem;
+            border-radius: 1rem;
+            margin: 0 1rem;
+        }
+        .description p:first-child,.total-a-pagar p{
+            font-size: var(--sm);
+            font-weight: bold;
+        }
+        .icon-container{
+            width: var(--card-size-mobile);
+            display: flex;
+
+        }
+        .icon-container img{
+            width: 50%;
+            border-radius: 50%;
+        }
+        .shopping-card{
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            padding:0rem 2rem 0rem 1rem;
+        }
+        .title{
+            font-size: var(--lg);
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            margin-left: 2rem;
+        }
+      
+        @media (min-width:640px) {
+            .product-datail{
+                width: 36rem;
+                position: absolute;
+                right: 0; 
+                margin: 0rem 1rem 0rem 1rem;            
+            }
+            .my-order-container{
+                
+                width: 36rem;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <aside class="product-datail">
+        <div class="my-order-container">
+            <h1 class="title">My order</h1>
+            
+            <div class="my-order-content">
+            
+                <div class="shopping-card">
+                    <figure class="icon-container">
+                        <img src="https://i.seadn.io/gae/uAJta1YRdB-fhq0Z1ZKB6SuOirVng9PyExwdEZu2Rl7uxDN_YLqgKI-L3egZZ0kWevHSsKVWd3MwOlLdtiDuVnknjcYoyBXTFCUQ?auto=format&w=1000" alt="producto" class="producto-img">
+                    </figure>
+                    <p>$120.00</p>
+                </div>
+    
+                <div class="shopping-card">
+                    <figure class="icon-container">
+                        <img src="https://i.seadn.io/gae/uAJta1YRdB-fhq0Z1ZKB6SuOirVng9PyExwdEZu2Rl7uxDN_YLqgKI-L3egZZ0kWevHSsKVWd3MwOlLdtiDuVnknjcYoyBXTFCUQ?auto=format&w=1000" alt="producto" class="producto-img">
+                    </figure>
+                    
+                    <p>$120.00</p>
+                </div>
+    
+                <div class="shopping-card">
+                    <figure class="icon-container">
+                        <img src="https://i.seadn.io/gae/uAJta1YRdB-fhq0Z1ZKB6SuOirVng9PyExwdEZu2Rl7uxDN_YLqgKI-L3egZZ0kWevHSsKVWd3MwOlLdtiDuVnknjcYoyBXTFCUQ?auto=format&w=1000" alt="producto" class="producto-img">
+                    </figure>
+                    
+                    <p>$120.00</p>
+                </div>
+
+                <div class="articulos">
+                    <div class="description">
+                        <p>Total</p>
+                    </div>
+                    <div class="total-a-pagar">
+                        <p>$ 560.00</p>
+                    </div>
+                </div>
+                
+                <button class="primary-button">
+                    Checkout
+                </button>
+
+            </div>
+           
+        </div>
+        
+       
+    </aside>
+
+    
+</body>
+</html>
