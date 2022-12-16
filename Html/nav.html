@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet"> 
+    
+    <title>Document</title>
+    <style>
+        :root{
+            --very-light-pink:#c7c7c7;
+            --white:#FFFFFF;
+            --text-input-field:#F7F7F7;
+            --black:#000000;
+            --hospital-green :#ACD9B2;
+            --dark:#232830;
+            --sm:1.4rem;
+            --md:1.6rem;
+            --lg:1.8rem;
+            --card-size-mobile:16rem;
+            --card-size-desktop:24rem;
+
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+           font-size: 62.5%;
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+            /*background-color:lightyellow;*/
+        }
+        
+        .navbar{
+           
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0rem 1rem;
+            height: 10rem;  
+            border-bottom: .1rem solid var(--very-light-pink);          
+        }
+        .nav-left ul,.nav-right ul{
+            list-style: none;
+            padding: 0;
+           
+            display: flex;
+            align-items: center;
+        }
+        .nav-left ul{
+            margin-left: 1.2rem;
+        }
+
+        .nav-left ul li a,.nav-right ul li a{
+            text-decoration: none;
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            border: .1rem solid var(--white);
+            padding: 1.2rem;
+            border-radius: .8rem;
+        }
+        .nav-left ul li a:hover,.nav-right ul li a:hover{
+            color: var(--hospital-green);
+            border: .1rem solid var(--hospital-green);
+        }
+        .nav-left{
+            display: flex;
+            
+            
+        }
+        .figure-logo{
+            display: none;
+        }
+        .icon-bar{
+            width:25% ;
+            
+        }
+        .logo{
+            width: 10rem;
+        }
+        .icon-car{
+            width: 5rem;
+        }
+        .nav-right ul li:first-child{
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            margin-right: 1.5rem;
+        }
+        
+        @media (max-width:640px){
+            .figure-logo{
+                display: block;
+                width: 4rem;
+            }
+            .icon-bar{
+                width: 100%;
+            }
+            .nav-left ul{
+                display: none;
+            }
+            .nav-right ul li:first-child{
+                display: none;
+            }
+         
+        }
+
+    </style>
+<body>
+    <nav class="navbar">
+        <figure class="figure-logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/6364/6364542.png" alt="bars" class="icon-bar">
+        </figure>
+        <div class="nav-left">
+        
+            <img src="https://www.pngkey.com/png/detail/66-661551_white-blank-shield-logo-school-logo-template-free.png" alt="logo" class="logo">
+        
+            <ul class="nav-links">
+                <li>
+                    <a href="#">All</a>
+                </li>
+            
+                <li>
+                    <a href="#">Clothes</a>
+                </li>
+            
+                <li>
+                    <a href="#">Electronics</a>
+                </li>
+            
+                <li>
+                    <a href="#">Furniture</a>
+                 </li>
+            
+                <li>
+                    <a href="#">Toys</a>
+                </li>
+            
+                <li>
+                    <a href="#">Others</a>
+                </li>
+            </ul>
+    </div>
+      <div class="nav-right">
+        <ul>
+            <li>Example@example.com</li>
+            <li >
+                <img src="https://icons.veryicon.com/png/o/transport/vehicle-management-icon-library/add-vehicles.png" alt="icon-add-car" class="icon-car">
+                    
+            </li>
+
+        </ul>
+            
+      </div>  
+    </nav>
+</body>
+</html>
