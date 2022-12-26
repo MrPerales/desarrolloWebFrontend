@@ -1,3 +1,4 @@
+/********General*********/
 :root{
     --very-light-pink:#c7c7c7;
     --white:#FFFFFF;
@@ -24,7 +25,7 @@ body{
     font-family: 'Quicksand', sans-serif;
     /*background-color:lightyellow;*/
 }
-
+/**********Navbar general******/
 .navbar{
    
     display: flex;
@@ -62,12 +63,15 @@ body{
 }
 .figure-logo{
     display: none;
+  
 }
+
 .logo{
     width: 5rem;
 }
 .icon-car{
     width: 5rem;
+    cursor: pointer;
 }
 .nav-right ul li:first-child{
     color: var(--very-light-pink);
@@ -118,14 +122,138 @@ body{
     cursor: pointer;
 }
 
-/****************************************************************************************/
+/*****************************MENU-MOBILE*******************************************************/
+.mobile-menu{
+    background-color: var(--white);
+    position: absolute;
+    top: 6rem;
+
+    height: 100vh;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.mobile-menu ul li{
+    list-style: none;
+    margin-bottom:2rem;
+
+}
+.mobile-menu a {
+    text-decoration: none;
+    font-size: var(--sm);
+    color: var(--black);
+    font-weight: bold;
+
+}
+.ul-dos{
+    border-top: .1rem solid var(--very-light-pink);
+    padding-top: 1.5rem;
+}
+
+.datos a{
+    font-weight: 300;
+}
+.datos ul li:last-child a{
+    color: var(--hospital-green);
+    font-weight: bold;
+}
+
+
+/******ASIDE*(PRODUCT*DETAIL)********/
+.primary-button{
+    background-color: var(--hospital-green);
+    border: none;
+    border-radius: .8rem;
+    color:var(--white) ;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 3.7rem;
+    margin: 0rem 1rem;
+    
+    
+}
+.product-datail{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--white);
+    
+    
+}
+.my-order-container{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 2rem;
+    width: 100vw;
+}
+.my-order-content{
+    display: grid;
+    gap: 1.6rem;
+}
+.articulos{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--text-input-field);
+    height: 5rem;
+    align-items: center;
+    padding: 0rem 1rem 0rem 1rem;
+    border-radius: 1rem;
+    margin: 0 1rem;
+}
+.description p:first-child,.total-a-pagar p{
+    font-size: var(--sm);
+    font-weight: bold;
+}
+.icon-container{
+    width: var(--card-size-mobile);
+    display: flex;
+
+}
+.icon-container img{
+    width: 50%;
+    border-radius: 50%;
+}
+.shopping-card{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:0rem 2rem 0rem 1rem;
+}
+.title{
+    font-size: var(--lg);
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: .5rem;
+}
+.icon-title{
+    display: flex;
+    align-items: center;
+}
+.flechita{
+    width: 2rem;
+    height:2rem;
+    margin-left: 1rem;
+}
 
 
 
 
-
-
-
+@media(min-width:641px){
+    .mobile-menu{
+        display: none;
+    }
+    .product-datail{
+        width: 36rem;
+        position: absolute;
+        right: 0; 
+        margin: 0rem 1rem 0rem 1rem;            
+    }
+    .my-order-container{
+        
+        width: 36rem;
+    }
+}
 
 
 
@@ -134,8 +262,8 @@ body{
         display: block;
         width: 4rem;
     }
-    .icon-bar{
-        width: 100%;
+    .inactive{
+        display: none;
     }
     .nav-left ul{
         display: none;
@@ -143,5 +271,9 @@ body{
     .nav-right ul li:first-child{
         display: none;
     }
- 
+    .menu-desktop{
+       display: none;
+    }
+
+
 }

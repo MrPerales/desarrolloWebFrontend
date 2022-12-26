@@ -99,7 +99,16 @@
             font-size: var(--lg);
             margin-bottom: 2rem;
             margin-top: 2rem;
-            margin-left: 2rem;
+            margin-left: .5rem;
+        }
+        .icon-title{
+            display: flex;
+            align-items: center;
+        }
+        .flechita{
+            width: 2rem;
+            height:2rem;
+            margin-left: 1rem;
         }
       
         @media (min-width:640px) {
@@ -120,8 +129,11 @@
 <body>
     <aside class="product-datail">
         <div class="my-order-container">
-            <h1 class="title">My order</h1>
-            
+            <div class="icon-title">
+                <img src="https://cdn-icons-png.flaticon.com/512/3485/3485764.png" alt="icon" class="flechita">
+                <h1 class="title">My order</h1>
+            </div>
+                        
             <div class="my-order-content">
             
                 <div class="shopping-card">
