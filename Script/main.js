@@ -5,10 +5,13 @@ const mobileMenu=document.querySelector(".mobile-menu");
 const menuCarritoIcon=document.querySelector(".navbar-carrito-icon");
 const aside=document.querySelector(".product-datail");
 const cardsContainer=document.querySelector('.cards-container');
+const productDetailContainer=document.querySelector('.product-datail-second');
+const iconClosedAside=document.querySelector('.icon-close');
 
 menuEmail.addEventListener("click" ,toggleDesktopMenu);
 burgerMenu.addEventListener("click", toggleMobileMenu);
 menuCarritoIcon.addEventListener("click",toggleCarritoAside);
+iconClosedAside.addEventListener('click',closeProductDetailAside);
 
 function toggleDesktopMenu(){
     const isAsideClosed=aside.classList.contains("inactive");
@@ -30,6 +33,7 @@ function toggleMobileMenu(){
     }
 
     mobileMenu.classList.toggle("inactive");
+    closeProductDetailAside();
 }
 function toggleCarritoAside(){
 
@@ -39,8 +43,25 @@ function toggleCarritoAside(){
         mobileMenu.classList.add("inactive");
     }
     aside.classList.toggle("inactive");
+    /*Cerrar el closedProductDetailAside para dejar ver el carrito*/ 
+    const isProductDetailClosed=productDetailContainer.classList.contains("inactive");
+
+    if(!isProductDetailClosed){
+        productDetailContainer.classList.add("inactive");
+    }
 }
 
+function openProductDetailAside(){
+    productDetailContainer.classList.remove('inactive');
+    /*Cerrar la ventana de mobile menu*/
+    mobileMenu.classList.add('inactive');
+    aside.classList.add('inactive');
+
+
+}
+function closeProductDetailAside(){
+    productDetailContainer.classList.add('inactive');
+}
 
 const productList=[];
 productList.push({
@@ -69,6 +90,8 @@ for(product of productList){
     productImg.setAttribute('src', product.image);
     productImg.classList.add('producto-img');
     productImg.setAttribute('alt', 'product');
+    /* evento para mostrar en grande los detalles del producto*/
+    productImg.addEventListener('click',openProductDetailAside);
 
     const divEspecificaciones=document.createElement('div');
     divEspecificaciones.classList.add('div-especificaciones');

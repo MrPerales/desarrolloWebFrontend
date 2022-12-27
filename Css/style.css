@@ -383,7 +383,7 @@ body{
          width: 100%;
     
      }
-
+    
 
 }
 
@@ -405,6 +405,11 @@ body{
     }
     .menu-desktop{
        display: none;
+    }
+    .product-datail-second{
+        width: 100%;
+       
+        
     }
 
 
