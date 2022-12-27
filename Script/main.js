@@ -41,6 +41,7 @@ function toggleCarritoAside(){
     aside.classList.toggle("inactive");
 }
 
+
 const productList=[];
 productList.push({
     name: "Sad Cheems",
@@ -57,6 +58,7 @@ productList.push({
     price: 300,
     image:"https://i.seadn.io/gae/e6sg5Ab9Ox9wR1_ZNVryncm6dRVv0W6ru4nhgNJ0bCExby3Q9eCvfMVpBgWepbfMFnMS69CamFNBlelEnjaFEDBH5SSBGxwRKMjV?auto=format&w=1000",
 });
+
 
 for(product of productList){
     ///creamos variables con elementos y les agregamos sus clases 
