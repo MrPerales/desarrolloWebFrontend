@@ -7,6 +7,7 @@ const aside=document.querySelector(".product-datail");
 const cardsContainer=document.querySelector('.cards-container');
 const productDetailContainer=document.querySelector('.product-datail-second');
 const iconClosedAside=document.querySelector('.icon-close');
+const infoImages=document.querySelector('.img-product');
 
 menuEmail.addEventListener("click" ,toggleDesktopMenu);
 burgerMenu.addEventListener("click", toggleMobileMenu);
@@ -51,12 +52,16 @@ function toggleCarritoAside(){
     }
 }
 
-function openProductDetailAside(){
+function openProductDetailAside(event){
     productDetailContainer.classList.remove('inactive');
     /*Cerrar la ventana de mobile menu*/
     mobileMenu.classList.add('inactive');
     aside.classList.add('inactive');
 
+    /*Con event.target en este caso es como si copiaramos el atributo src y sobreescribimos el que tenia */
+
+    infoImages.setAttribute('src',event.target.src);
+   
 
 }
 function closeProductDetailAside(){
@@ -80,46 +85,50 @@ productList.push({
     image:"https://i.seadn.io/gae/e6sg5Ab9Ox9wR1_ZNVryncm6dRVv0W6ru4nhgNJ0bCExby3Q9eCvfMVpBgWepbfMFnMS69CamFNBlelEnjaFEDBH5SSBGxwRKMjV?auto=format&w=1000",
 });
 
+function renderProducts(array){
 
-for(product of productList){
-    ///creamos variables con elementos y les agregamos sus clases 
-    const productCard=document.createElement('div');
-    productCard.classList.add('product-card');
-
-    const productImg=document.createElement('img');
-    productImg.setAttribute('src', product.image);
-    productImg.classList.add('producto-img');
-    productImg.setAttribute('alt', 'product');
-    /* evento para mostrar en grande los detalles del producto*/
-    productImg.addEventListener('click',openProductDetailAside);
-
-    const divEspecificaciones=document.createElement('div');
-    divEspecificaciones.classList.add('div-especificaciones');
-
-    const especificaciones=document.createElement('div');
-    especificaciones.classList.add('especificaciones');
-
-    const productPrice=document.createElement('p');
-    productPrice.innerText= '$' + product.price;
-
-    const productName=document.createElement('p');
-    productName.innerText= product.name;
+    for(product of array){
+        ///creamos variables con elementos y les agregamos sus clases 
+        const productCard=document.createElement('div');
+        productCard.classList.add('product-card');
     
-    const figureIconContainer =document.createElement('figure');
-    figureIconContainer.classList.add('icon-container');
-
-    const imgIconAddCar=document.createElement('img');
-    imgIconAddCar.setAttribute('src','https://icons.veryicon.com/png/o/transport/vehicle-management-icon-library/add-vehicles.png')
-    imgIconAddCar.setAttribute('alt','icon-add-car');
-
-    /*maquetamos el html con append y appendChild*/
-    /*append para varios elementos */
-    /*appendChild para un solo elemento*/  
-    cardsContainer.appendChild(productCard);
-    productCard.append(productImg,divEspecificaciones);
-    divEspecificaciones.append(especificaciones,figureIconContainer);
-    especificaciones.append(productPrice,productName);
-    figureIconContainer.append(imgIconAddCar);
-
-
+        const productImg=document.createElement('img');
+        productImg.setAttribute('src', product.image);
+        productImg.classList.add('producto-img');
+        productImg.setAttribute('alt', 'product');
+        /* evento para mostrar en grande los detalles del producto*/
+        productImg.addEventListener('click',openProductDetailAside);
+        
+    
+        const divEspecificaciones=document.createElement('div');
+        divEspecificaciones.classList.add('div-especificaciones');
+    
+        const especificaciones=document.createElement('div');
+        especificaciones.classList.add('especificaciones');
+    
+        const productPrice=document.createElement('p');
+        productPrice.innerText= '$' + product.price;
+    
+        const productName=document.createElement('p');
+        productName.innerText= product.name;
+        
+        const figureIconContainer =document.createElement('figure');
+        figureIconContainer.classList.add('icon-container');
+    
+        const imgIconAddCar=document.createElement('img');
+        imgIconAddCar.setAttribute('src','https://icons.veryicon.com/png/o/transport/vehicle-management-icon-library/add-vehicles.png')
+        imgIconAddCar.setAttribute('alt','icon-add-car');
+    
+        /*maquetamos el html con append y appendChild*/
+        /*append para varios elementos */
+        /*appendChild para un solo elemento*/  
+        cardsContainer.appendChild(productCard);
+        productCard.append(productImg,divEspecificaciones);
+        divEspecificaciones.append(especificaciones,figureIconContainer);
+        especificaciones.append(productPrice,productName);
+        figureIconContainer.append(imgIconAddCar);
+    }
 }
+renderProducts(productList);
+
+
