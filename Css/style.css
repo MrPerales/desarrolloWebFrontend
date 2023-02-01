@@ -351,6 +351,9 @@ body{
     font-size: var(--sm);
     color: var(--very-light-pink);
 }
+.icon-add-car{
+    cursor: pointer;
+}
 
 
 

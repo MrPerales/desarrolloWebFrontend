@@ -8,11 +8,14 @@ const cardsContainer=document.querySelector('.cards-container');
 const productDetailContainer=document.querySelector('.product-datail-second');
 const iconClosedAside=document.querySelector('.icon-close');
 const infoImages=document.querySelector('.img-product');
+const flechitaClosed=document.querySelector('.flechita');
 
 menuEmail.addEventListener("click" ,toggleDesktopMenu);
 burgerMenu.addEventListener("click", toggleMobileMenu);
 menuCarritoIcon.addEventListener("click",toggleCarritoAside);
 iconClosedAside.addEventListener('click',closeProductDetailAside);
+flechitaClosed.addEventListener('click',closedCarrito);
+
 
 function toggleDesktopMenu(){
     const isAsideClosed=aside.classList.contains("inactive");
@@ -52,6 +55,10 @@ function toggleCarritoAside(){
     }
 }
 
+function closedCarrito(){
+    aside.classList.add('inactive');
+}
+
 function openProductDetailAside(event){
     productDetailContainer.classList.remove('inactive');
     /*Cerrar la ventana de mobile menu*/
@@ -85,9 +92,9 @@ productList.push({
     image:"https://i.seadn.io/gae/e6sg5Ab9Ox9wR1_ZNVryncm6dRVv0W6ru4nhgNJ0bCExby3Q9eCvfMVpBgWepbfMFnMS69CamFNBlelEnjaFEDBH5SSBGxwRKMjV?auto=format&w=1000",
 });
 
-function renderProducts(array){
+function renderProducts(arr){
 
-    for(product of array){
+    for(product of arr){
         ///creamos variables con elementos y les agregamos sus clases 
         const productCard=document.createElement('div');
         productCard.classList.add('product-card');
@@ -118,6 +125,7 @@ function renderProducts(array){
         const imgIconAddCar=document.createElement('img');
         imgIconAddCar.setAttribute('src','https://icons.veryicon.com/png/o/transport/vehicle-management-icon-library/add-vehicles.png')
         imgIconAddCar.setAttribute('alt','icon-add-car');
+        imgIconAddCar.setAttribute('class','icon-add-car');
     
         /*maquetamos el html con append y appendChild*/
         /*append para varios elementos */
